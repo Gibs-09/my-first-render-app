@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #0b6b3a;
+    margin-top: 30px;
+    font-size: 36px;
+}
+
+h2 {
+    text-align: center;
+    color: #222;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    background: #00a651;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #008f45;
+}
