@@ -1,43 +1,22 @@
-<!DOCTYPE html>
-<html lang="sw">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mkopo wa Mixx</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
+const express = require("express");
+const path = require("path");
 
-<header class="hero">
-  <h1>💰 Mkopo wa Mixx</h1>
-  <p>Pata Mkopo Wako katika Dakika 15</p>
-  <small>Mikopo ya haraka, wazi, na salama kutoka TSh 500,000 hadi TSh 50,000,000</small>
-</header>
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-<section class="stats">
-  <div>50K+ Wateja Wenye Furaha</div>
-  <div>TSh 2.5 Bilioni+ Imetolewa</div>
-  <div>4.9★ Alama ya Kuaminika</div>
-</section>
+// IMPORTANT: correct static path
+app.use(express.static(path.join(__dirname, "public")));
 
-<section class="calculator">
-  <h2>Kokotoa Mkopo Wako</h2>
+// FORCE homepage
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
-  <label>Kiasi cha Mkopo</label>
-  <input type="range" min="500000" max="50000000" value="5000000">
+// test route
+app.get("/a/:code", (req, res) => {
+  res.send("Code: " + req.params.code);
+});
 
-  <label>Muda (Miezi)</label>
-  <input type="number" value="12">
-
-  <p>Malipo ya Kila Mwezi: <b>TSh 444,244</b></p>
-  <p>Jumla ya Malipo: <b>TSh 5,330,927</b></p>
-
-  <button>Omba Sasa</button>
-</section>
-
-<footer>
-  <p>© 2026 Mkopo wa Mixx</p>
-</footer>
-
-</body>
-</html>
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
