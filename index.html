@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mkopo wa Mixx</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mkopo wa Mixx</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-    <h1>💰 Mkopo wa Mixx</h1>
+<header class="hero">
+  <h1>💰 Mkopo wa Mixx</h1>
+  <p>Pata Mkopo Wako katika Dakika 15</p>
+  <small>Mikopo ya haraka, wazi, na salama kutoka TSh 500,000 hadi TSh 50,000,000</small>
+</header>
 
-    <p>✓ Leseni & Udhibiti</p>
+<section class="stats">
+  <div>50K+ Wateja Wenye Furaha</div>
+  <div>TSh 2.5 Bilioni+ Imetolewa</div>
+  <div>4.9★ Alama ya Kuaminika</div>
+</section>
 
-    <h2>Pata Mkopo Wako katika Dakika 15</h2>
+<section class="calculator">
+  <h2>Kokotoa Mkopo Wako</h2>
 
-    <p>
-        Mikopo ya haraka, wazi, na salama kutoka
-        TSh 500,000 hadi TSh 50,000,000
-    </p>
+  <label>Kiasi cha Mkopo</label>
+  <input type="range" min="500000" max="50000000" value="5000000">
 
-    <button>Omba Sasa</button>
+  <label>Muda (Miezi)</label>
+  <input type="number" value="12">
 
-    <script src="script.js"></script>
+  <p>Malipo ya Kila Mwezi: <b>TSh 444,244</b></p>
+  <p>Jumla ya Malipo: <b>TSh 5,330,927</b></p>
+
+  <button>Omba Sasa</button>
+</section>
+
+<footer>
+  <p>© 2026 Mkopo wa Mixx</p>
+</footer>
 
 </body>
 </html>
