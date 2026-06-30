@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: my-first-render-app
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
